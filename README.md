@@ -9,4 +9,4 @@ below is a list of the programs that need the dotfiles.
 * `conky`
 * `xorg`
 * `zsh`
-* `vim` --> [check here](http://github.com/bg46z/vim)
+* [`vim`](http://github.com/bg46z/vim)
