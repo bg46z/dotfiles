@@ -1,0 +1,8 @@
+alias ls="ls --color=auto"
+alias l="ls -l"
+alias la="ls -la"
+alias grep="grep --color=auto"
+alias ag="sudo apt-get"
+alias agu="ag update"
+alias agd="ag dist-upgrade"
+alias agi="ag install"
