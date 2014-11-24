@@ -1,10 +1,10 @@
+# Environment Variables
 export EDITOR=vim
+export PATH="$PATH:~/bin"
 
-antigen use oh-my-zsh
-antigen bundles <<EOBUNDLES
-git 
-zsh-users/zsh-completions src
-zsh-users/zsh-syntax-highlighting
-EOBUNDLES
-antigen apply
+# ZSH Variables
+
+
+# Aliases
+source aliases.zsh
 
