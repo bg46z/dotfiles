@@ -6,7 +6,12 @@ below is a list of the programs that need the dotfiles.
 
 * `i3-wm`
 * `i3status`
-* `conky`
-* `xorg`
 * `zsh`
 * [`vim`](http://github.com/bg46z/vim)
+
+This uses submodules for some things. 
+
+so after you clone, you have to do the following:
+
+`$ git submodule init && git submodule update`
+
