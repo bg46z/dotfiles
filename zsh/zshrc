@@ -1,10 +1,10 @@
 # Environment Variables
 export EDITOR=vim
-export PATH="$PATH:~/bin"
+export PATH="/home/zach/.rvm/gems/ruby-2.1.4/bin:/home/zach/.rvm/gems/ruby-2.1.4@global/bin:/home/zach/.rvm/rubies/ruby-2.1.4/bin:/home/zach/.rvm/bin:/home/zach/.gem/ruby/1.9.1/bin:/home/zach/.rvm/bin:/home/zach/bin:$PATH"
 
 # ZSH Variables
+ZSHCONFDIR=(~/.dotfiles/zsh)
 
-
-# Aliases
-source aliases.zsh
-
+# Source Files
+source $ZSHCONFDIR/aliases.zsh
+source $ZSHCONFDIR/prompt.zsh
