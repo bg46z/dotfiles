@@ -1,17 +1,18 @@
 dotfiles
 ========
 
-This is a collection of my dotfiles. This also contains a scripts directory to run scripts and other things from. 
-below is a list of the programs that need the dotfiles. 
+This is a collection of my dotfiles, and other configuration necessities for my workflow.
 
-* `i3-wm`
+* `i3`
 * `i3status`
 * `zsh`
-* [`vim`](http://github.com/bg46z/vim)
+* `mc`
+* [`powerline-fonts`](https://github.com/powerline/fonts)
+* [`sysadminscripts`](https://github.com/bg46z/sysadminscripts)
 
-This uses submodules for some things. 
 
-so after you clone, you have to do the following:
+This uses submodules for some things, so after you clone, you have to do the following:
 
-`$ git submodule init && git submodule update`
+`git submodule init && git submodule update`
 
+In the future, I plan to add `tmux`, `mutt`, and some other configuration options. at some point I'll update the install script to add these in one by one.
