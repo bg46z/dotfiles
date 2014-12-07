@@ -12,4 +12,3 @@ ZSHCONFDIR=(~/.dotfiles/zsh)
 source $ZSHCONFDIR/aliases.zsh
 source $ZSHCONFDIR/prompt.zsh
 source $ZSHCONFDIR/functions.zsh
-
