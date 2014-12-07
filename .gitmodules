@@ -1,12 +1,6 @@
-[submodule "vim"]
-	path = vim
-	url = http://github.com/bg46z/vim.git
 [submodule "powerline-fonts"]
 	path = powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts.git
 [submodule "sysadminscripts"]
 	path = sysadminscripts
 	url = git@github.com:bg46z/sysadminscripts.git
-[submodule "zsh/antigen"]
-	path = zsh/antigen
-	url = https://github.com/zsh-users/antigen.git
