@@ -1,1 +1,2 @@
-add in script to automate oh-my-zsh install
+add in osdetection
+add ENV variable configuration
