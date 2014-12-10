@@ -15,3 +15,6 @@ alias agd="ag dist-upgrade"
 alias agi="ag install"
 alias ac="apt-cache"
 alias acs="ac search"
+
+# Typo correction...
+alias cim="vim"
