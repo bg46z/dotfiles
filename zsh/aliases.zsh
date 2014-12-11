@@ -18,3 +18,8 @@ alias acs="ac search"
 
 # Typo correction...
 alias cim="vim"
+
+# Git aliases, a few borrowed from Oh My Zsh!
+alias g="git"
+alias gl="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=10" 
+alias ga="_git-add"
