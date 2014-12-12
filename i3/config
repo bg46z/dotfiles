@@ -1,3 +1,6 @@
+# Turn Borders to minimum
+for_window [class="^.*"] border pixel 1
+
 # Set Modifier
 set $mod Mod4
 
@@ -165,4 +168,3 @@ bindsym $mod+F12 exec amixer -D pulse sset Master 2%+
 for_window [window_role="pop-up"] floating enable, border pixel 3
 for_window [window_role="pop-up"] move absolute position 1635 px 660 px
 
-for_window [class="^.*"] border pixel 1
