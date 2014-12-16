@@ -1,2 +1,1 @@
-add in osdetection
-add ENV variable configuration
+RPROMPT funtion

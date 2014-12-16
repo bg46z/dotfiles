@@ -1,12 +1,11 @@
 # Environment Variables
 export EDITOR=vim
 export PATH="/home/zach/.rvm/gems/ruby-2.1.4/bin:/home/zach/.rvm/gems/ruby-2.1.4@global/bin:/home/zach/.rvm/rubies/ruby-2.1.4/bin:/home/zach/.rvm/bin:/home/zach/.gem/ruby/1.9.1/bin:/home/zach/.rvm/bin:/home/zach/bin:$PATH"
+ZSHCONFDIR=(~/.dotfiles/zsh)
 
 # Autoload
-#typeset -Ag FX FG BG
-
-# ZSH Variables
-ZSHCONFDIR=(~/.dotfiles/zsh)
+fpath=( $ZSHCONFDIR/lib/functions "${fpath[@]}")
+autoload -Uz ww _git-add vcs_info vcs_info_rprompt
 
 # Source Files
 source $ZSHCONFDIR/aliases.zsh
