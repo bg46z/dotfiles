@@ -3,11 +3,12 @@ export EDITOR=vim
 export TERM=xterm-256color
 export PATH="/home/zach/.rvm/gems/ruby-2.1.4/bin:/home/zach/.rvm/gems/ruby-2.1.4@global/bin:/home/zach/.rvm/rubies/ruby-2.1.4/bin:/home/zach/.rvm/bin:/home/zach/.gem/ruby/1.9.1/bin:/home/zach/.rvm/bin:/home/zach/bin:$PATH"
 ZSHCONFDIR=(~/.dotfiles/zsh)
+ZSHLIBDIR=($ZSHCONFDIR/lib)
 
 # Autoload
-fpath=( $ZSHCONFDIR/lib/functions "${fpath[@]}")
+fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
 autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot
 
 # Source Files
-source $ZSHCONFDIR/aliases.zsh
-source $ZSHCONFDIR/prompt.zsh
+source $ZSHLIBDIR/aliases/aliases.zsh
+source $ZSHLIBDIR/prompt/prompt.zsh

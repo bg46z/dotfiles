@@ -1,1 +1,1 @@
-RPROMPT funtion
+autoloadable aliases
