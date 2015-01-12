@@ -9,6 +9,10 @@ ZSHLIBDIR=($ZSHCONFDIR/lib)
 fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
 autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot
 
+# Completion
+autoload -Uz compinit
+compinit
+
 # Source Files
 source $ZSHLIBDIR/aliases/aliases.zsh
 source $ZSHLIBDIR/prompt/prompt.zsh

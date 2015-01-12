@@ -83,6 +83,19 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
+# switch to workspace (numberpad)
+
+bindsym KP_End workspace 1
+bindsym KP_Down workspace 2
+bindsym KP_Next workspace 3
+bindsym KP_Left workspace 4
+bindsym KP_Begin workspace 5
+bindsym KP_Right workspace 6
+bindsym KP_Home workspace 7
+bindsym KP_Up workspace 8
+bindsym KP_Prior workspace 9
+bindsym KP_Insert workspace 10
+
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
