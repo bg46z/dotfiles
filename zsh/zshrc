@@ -7,7 +7,7 @@ ZSHLIBDIR=($ZSHCONFDIR/lib)
 
 # Autoload
 fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
-autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot ls
+autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot 
 
 # Completion
 autoload -Uz compinit
