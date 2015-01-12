@@ -1,2 +1,10 @@
 #!/usr/bin/zsh
+ls() {
+	if [[$(uname) == "Linux"]];
+	then
+		/bin/ls --color=auto
+	else	
+		/bin/ls -G
+	fi
+}
 

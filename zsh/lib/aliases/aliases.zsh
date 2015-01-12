@@ -1,5 +1,4 @@
 # System Aliases
-alias ls="ls --color=auto"
 alias l="ls"
 alias ll="l -l"
 alias la="l -la"
