@@ -1,5 +1,6 @@
 # Turn Borders to minimum
 for_window [class="^.*"] border pixel 1
+exec --no-startup-id feh --randomize --recursive --bg-scale $HOME/Pictures/*
 
 # Set Modifier
 set $mod Mod4
@@ -85,16 +86,16 @@ bindsym $mod+0 workspace 10
 
 # switch to workspace (numberpad)
 
-bindsym KP_End workspace 1
-bindsym KP_Down workspace 2
-bindsym KP_Next workspace 3
-bindsym KP_Left workspace 4
-bindsym KP_Begin workspace 5
-bindsym KP_Right workspace 6
-bindsym KP_Home workspace 7
-bindsym KP_Up workspace 8
-bindsym KP_Prior workspace 9
-bindsym KP_Insert workspace 10
+bindsym Shift+KP_End workspace 1
+bindsym Shift+KP_Down workspace 2
+bindsym Shift+KP_Next workspace 3
+bindsym Shift+KP_Left workspace 4
+bindsym Shift+KP_Begin workspace 5
+bindsym Shift+KP_Right workspace 6
+bindsym Shift+KP_Home workspace 7
+bindsym Shift+KP_Up workspace 8
+bindsym Shift+KP_Prior workspace 9
+bindsym Shift+KP_Insert workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
