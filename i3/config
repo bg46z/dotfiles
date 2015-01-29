@@ -1,6 +1,8 @@
+exec --no-startup-id xmodmap $HOME/.dotfiles/misc/capslock
+exec --no-startup-id feh --randomize --recursive --bg-scale $HOME/Pictures/*
+
 # Turn Borders to minimum
 for_window [class="^.*"] border pixel 1
-exec --no-startup-id feh --randomize --recursive --bg-scale $HOME/Pictures/*
 
 # Set Modifier
 set $mod Mod4
