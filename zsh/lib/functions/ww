@@ -7,4 +7,4 @@ then url="${url}/?q=";
 	done;
 	url=${url%?};
 fi
-xdg-open "$url" 2> /dev/null
+detach google-chrome-stable "$url"

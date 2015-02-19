@@ -6,13 +6,37 @@ ZSHCONFDIR=(~/.dotfiles/zsh)
 ZSHLIBDIR=($ZSHCONFDIR/lib)
 
 # Autoload
-fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
-autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot 
 
-# Completion
-autoload -Uz compinit
+# Completion and other built-in functions
+autoload -Uz compinit vcs_info
 compinit
 
+
+fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
+#autoload -Uz ww _git-add vcs_info_rprompt dot 
+for file in $ZSHLIBDIR/functions/* ; do
+	if [[ -a "$file" ]]; then
+		filename=${file:t}
+		autoload -Uz "$filename"
+	fi
+done
+
+
 # Source Files
-source $ZSHLIBDIR/aliases/aliases.zsh
-source $ZSHLIBDIR/prompt/prompt.zsh
+# Add files to "sourcefiles" array, then source each file in the array.
+typeset -ga sourcefiles
+
+for file in $ZSHLIBDIR/aliases/* ; do
+	if [[ -a "$file" ]]; then
+		sourcefiles+="$file"
+	fi
+done
+
+# Prompt Specific
+sourcefiles+="$ZSHLIBDIR/prompt/prompt.zsh"
+
+for file in $sourcefiles[@]; do
+	if [[ -a "$file" ]]; then
+		source "$file"
+	fi
+done
