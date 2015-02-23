@@ -8,7 +8,7 @@ for_window [class="^.*"] border pixel 1
 set $mod Mod4
 
 # Fonts
-font pango:DejaVu Sans Mono 10
+font xft:DejaVu Sans Mono 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -173,9 +173,6 @@ bindsym $mod+F2 exec thunderbird
 bindsym $mod+F3 exec google-chrome
 
 
-#volume
-bindsym $mod+F11 exec amixer -D pulse sset Master 2%-
-bindsym $mod+F12 exec amixer -D pulse sset Master 2%+
 
 # window_role is Typically useful for effecting child windows
 # such as instant messaging converstations, email composition
