@@ -1,1 +1,2 @@
-autoloadable aliases
+inotify for functions and aliases
+load aliases based on distribution of Linux/OSX/whatever.
