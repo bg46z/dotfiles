@@ -1,5 +1,5 @@
-exec --no-startup-id xmodmap $HOME/.dotfiles/misc/capslock
-exec --no-startup-id feh --randomize --recursive --bg-scale $HOME/Pictures/*
+exec --no-startup-id bash .dotfiles/i3/fehchanger 
+exec --no-startup-id compton -cCGb --backend glx --vsync opengl --config .dotfiles/compton/compton.conf
 
 # Turn Borders to minimum
 for_window [class="^.*"] border pixel 1
