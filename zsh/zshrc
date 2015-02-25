@@ -3,7 +3,6 @@ export EDITOR=vim
 export TERM=xterm-256color
 export PATH="$HOME/bin:$PATH"
 ZSHCONFDIR=(~/.dotfiles/zsh)
-ZSHLIBDIR=($ZSHCONFDIR/lib)
 
 # Autoload
 
@@ -12,9 +11,9 @@ autoload -Uz compinit vcs_info
 compinit
 
 
-fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
+fpath=( $ZSHCONFDIR/functions "${fpath[@]}")
 #autoload -Uz ww _git-add vcs_info_rprompt dot 
-for file in $ZSHLIBDIR/functions/* ; do
+for file in $ZSHCONFDIR/functions/* ; do
 	if [[ -a "$file" ]]; then
 		filename=${file:t}
 		autoload -Uz "$filename"
@@ -26,14 +25,14 @@ done
 # Add files to "sourcefiles" array, then source each file in the array.
 typeset -ga sourcefiles
 
-for file in $ZSHLIBDIR/aliases/* ; do
+for file in $ZSHCONFDIR/aliases/* ; do
 	if [[ -a "$file" ]]; then
 		sourcefiles+="$file"
 	fi
 done
 
 # Prompt Specific
-sourcefiles+="$ZSHLIBDIR/prompt/prompt.zsh"
+sourcefiles+="$ZSHCONFDIR/prompt/prompt.zsh"
 
 for file in $sourcefiles[@]; do
 	if [[ -a "$file" ]]; then

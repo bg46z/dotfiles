@@ -1,0 +1,1 @@
+ruby ~/.dotfiles/misc/jekyll-new-post.rb -b "$HOME/src/blog" $@
