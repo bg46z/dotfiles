@@ -2,7 +2,7 @@
 export EDITOR=vim
 export TERM=xterm-256color
 export PATH="$HOME/bin:$PATH"
-ZSHCONFDIR=(~/.dotfiles/zsh)
+ZSHCONFDIR=($DOTFILES/zsh)
 
 # Autoload
 

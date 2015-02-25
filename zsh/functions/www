@@ -7,4 +7,4 @@ then url="${url}/?q=";
 	done;
 	url=${url%?};
 fi
-detach google-chrome-stable "$url"
+detach $BROWSER "$url"
