@@ -16,3 +16,4 @@
 	undo= reset --hard
 	unstage = reset HEAD --
 	last = log -1 HEAD
+	sign = commit -S
