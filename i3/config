@@ -1,9 +1,6 @@
 exec --no-startup-id bash .dotfiles/i3/fehchanger 
 exec --no-startup-id compton -cCGb --backend glx --vsync opengl --config .dotfiles/compton/compton.conf
 
-# Turn Borders to minimum
-for_window [class="^.*"] border pixel 1
-
 # Set Modifier
 set $mod Mod4
 
@@ -14,7 +11,7 @@ font xft:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -23,10 +20,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run -l 3 -i -fn "DejaVu Sans Mono-10" -p ">>> "
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -35,10 +32,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -48,7 +45,7 @@ bindsym $mod+Shift+Right move right
 
 # THIS IS INVERTED
 # split horizontally 
-bindsym $mod+h split v
+bindsym $mod+b split v
 
 #this is inverted
 # split vertically
@@ -63,10 +60,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -124,10 +121,10 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym j resize shrink width 10 px or 10 ppt
-	bindsym k resize grow height 10 px or 10 ppt
-	bindsym l resize shrink height 10 px or 10 ppt
-	bindsym semicolon resize grow width 10 px or 10 ppt
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
 	bindsym Left resize shrink width 10 px or 10 ppt
@@ -164,20 +161,17 @@ bar {
 }
 
 # colors		border		background	font		indicator
-client.focused          #5D606F		#B8DAD9 	#ffffff 	#6D607C
+client.focused          #222222		#222222 	#222222 	#222222
+client.focused_inactive          #222222		#222222 	#222222 	#222222
 client.unfocused        #222222		#222222 	#222222 	#222222
-
-# application shortcuts
-bindsym $mod+F1 exec firefox
-bindsym $mod+F2 exec thunderbird
-bindsym $mod+F3 exec google-chrome
-
-
 
 # window_role is Typically useful for effecting child windows
 # such as instant messaging converstations, email composition
 # windows, etc.
 #   xprop | grep -i 'role'#
-for_window [window_role="pop-up"] floating enable, border pixel 3
-for_window [window_role="pop-up"] move absolute position 1635 px 660 px
+for_window [window_role="pop-up"] floating enable, border pixel 1
 
+# Turn Borders to minimum
+for_window [class="^.*"] border pixel 0
+for_window [class="*"] border pixel 0
+#new_window normal 0 px
