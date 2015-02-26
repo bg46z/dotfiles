@@ -1,0 +1,18 @@
+[user]
+	email = zbridges@gmail.com
+	name = Zachary Bridges
+	signingkey = 72D5D623
+[push]
+	default = simple
+[alias]
+	a = add .
+	c = commit
+	i = init
+	l = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=10
+	s = status
+	co = checkout
+	br = branch
+	pu = push
+	undo= reset --hard
+	unstage = reset HEAD --
+	last = log -1 HEAD

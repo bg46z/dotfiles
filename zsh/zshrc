@@ -1,8 +1,10 @@
 # Environment Variables
 export EDITOR=vim
 export TERM=xterm-256color
-export PATH="$HOME/bin:$PATH"
 ZSHCONFDIR=($DOTFILES/zsh)
+# export PATH="$HOME/bin:$PATH"
+typeset -gU path
+path=($HOME/bin $HOME/.gem/ruby/2.2.0/bin $path)
 
 # Autoload
 
