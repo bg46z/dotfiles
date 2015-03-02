@@ -1,4 +1,5 @@
 # System Aliases
+alias ls="ls --color=auto"
 alias l="ls"
 alias ll="l -l"
 alias la="l -la"
@@ -23,3 +24,8 @@ alias g="git"
 alias gl="git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=10" 
 alias ga="_git-add" # from functions.zsh
 alias gc="git commit"
+
+# Make aliases
+alias m="make"
+alias mc="make clean"
+alias mi="make install"
