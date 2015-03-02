@@ -1,7 +1,6 @@
 # Left-handed prompt
-PROMPT="%2~ %F{160}>>%f%F{136};--%f%F{160>%f "
-PROMPT2="%~ %F{160}>>%f%F{136};--%f%F{160>%f "
-
+PROMPT="%(!.%F{214}%U%Broot%b%u@%m %~ %#%f .%2~ %F{160}>>%f%F{136};--%f%F{160>%f )"
+PROMPT2="%~ %F{160}>%f "
 
 # Up-to-the-minute time in RPROMPT
 TMOUT=15

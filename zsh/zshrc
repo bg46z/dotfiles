@@ -4,16 +4,43 @@ export TERM=xterm-256color
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$HOME/bin:$HOME/.rvm/bin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 ZSHCONFDIR=(~/.dotfiles/zsh)
-ZSHLIBDIR=($ZSHCONFDIR/lib)
+ZSHCONFDIR=($DOTFILES/zsh)
+# export PATH="$HOME/bin:$PATH"
+typeset -gU path
+path=($HOME/bin $HOME/.gem/ruby/2.2.0/bin $path)
 
 # Autoload
-fpath=( $ZSHLIBDIR/functions "${fpath[@]}")
-autoload -Uz ww _git-add vcs_info vcs_info_rprompt dot 
 
-# Completion
-autoload -Uz compinit
+# Completion and other built-in functions
+autoload -Uz compinit vcs_info
 compinit
 
+
+fpath=( $ZSHCONFDIR/functions "${fpath[@]}")
+#autoload -Uz ww _git-add vcs_info_rprompt dot 
+for file in $ZSHCONFDIR/functions/* ; do
+	if [[ -a "$file" ]]; then
+		filename=${file:t}
+		autoload -Uz "$filename"
+	fi
+done
+
+
 # Source Files
-source $ZSHLIBDIR/aliases/aliases.zsh
-source $ZSHLIBDIR/prompt/prompt.zsh
+# Add files to "sourcefiles" array, then source each file in the array.
+typeset -ga sourcefiles
+
+for file in $ZSHCONFDIR/aliases/* ; do
+	if [[ -a "$file" ]]; then
+		sourcefiles+="$file"
+	fi
+done
+
+# Prompt Specific
+sourcefiles+="$ZSHCONFDIR/prompt/prompt.zsh"
+
+for file in $sourcefiles[@]; do
+	if [[ -a "$file" ]]; then
+		source "$file"
+	fi
+done
