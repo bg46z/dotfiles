@@ -1,4 +1,5 @@
 export DOTFILES="$HOME/.dotfiles"
+export TMPDIR="$HOME/tmp"
 export BROWSER=google-chrome-stable
 export TERM=rxvt-unicode-256color
 export VIMRUNTIME="/usr/local/share/vim/vim74"
