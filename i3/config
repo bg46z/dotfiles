@@ -174,3 +174,8 @@ bar {
 #   xprop | grep -i 'role'#
 for_window [window_role="pop-up"] floating enable, border pixel 1
 for_window [class="(?i)pidgin" window_role="buddy_list"] floating enable, border pixel 1, move container to workspace 1
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
