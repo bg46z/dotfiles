@@ -1,3 +1,10 @@
 export DOTFILES="$HOME/.dotfiles"
+export TMPDIR="$HOME/tmp"
 export BROWSER=google-chrome-stable
+<<<<<<< HEAD
 export TERM=xterm-256color
+=======
+export TERM=rxvt-unicode-256color
+export VIMRUNTIME="/usr/local/share/vim/vim74"
+export PAGER="/usr/local/bin/vimpager"
+>>>>>>> 35d3ae3104e949a04953654fc1dc5ce72c426cbd

@@ -14,6 +14,7 @@
 	l = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short --max-count=10
 	s = status
 	co = checkout
+	cob = checkout -b
 	br = branch
 	pu = push
 	undo= reset --hard
@@ -27,3 +28,5 @@
 [difftool]
 	prompt = false
 
+[merge]
+	ff = false

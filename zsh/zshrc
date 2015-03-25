@@ -7,7 +7,9 @@ ZSHCONFDIR=(~/.dotfiles/zsh)
 ZSHCONFDIR=($DOTFILES/zsh)
 # export PATH="$HOME/bin:$PATH"
 typeset -gU path
-path=($HOME/bin $HOME/.gem/ruby/2.2.0/bin $path)
+path=($HOME/bin $HOME/.gem/ruby/2.2.0/bin $HOME/work/imbldaptools/bin $path)
+zstyle ":completion:*:commands" rehash 1
+
 
 # Autoload
 
