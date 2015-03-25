@@ -14,6 +14,7 @@ floating_modifier $mod
 bindsym $mod+Shift+q kill
 
 hide_edge_borders both
+new_window none
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run -l 3 -i -fn "DejaVu Sans Mono-10" -p ">>> "
@@ -122,16 +123,16 @@ mode "resize" {
 # Pressing right will grow the window’s width.
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
-	bindsym h resize shrink width 10 px or 10 ppt
-	bindsym j resize grow height 10 px or 10 ppt
-	bindsym k resize shrink height 10 px or 10 ppt
-	bindsym l resize grow width 10 px or 10 ppt
+	bindsym h resize grow width 10 px or 10 ppt
+	bindsym j resize shrink height 10 px or 10 ppt
+	bindsym k resize grow height 10 px or 10 ppt
+	bindsym l resize shrink width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-	bindsym Left resize shrink width 10 px or 10 ppt
-	bindsym Down resize grow height 10 px or 10 ppt
-	bindsym Up resize shrink height 10 px or 10 ppt
-	bindsym Right resize grow width 10 px or 10 ppt
+	bindsym Left resize grow width 10 px or 10 ppt
+	bindsym Down resize shrink height 10 px or 10 ppt
+	bindsym Up resize grow height 10 px or 10 ppt
+	bindsym Right resize shrink width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
 	bindsym Return mode "default"

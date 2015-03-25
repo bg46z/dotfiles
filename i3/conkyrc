@@ -39,7 +39,7 @@ TEXT
         "color"     : "\#88ABC4"
 	},
 	{
-		"full_text"	: " ${uid_name ${exec id -u}} ",	
+		"full_text"	: "☆ ${uid_name ${exec id -u}} ☆",	
         "color"     : "\#88ABC4"
 	},
     {
@@ -47,19 +47,19 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : " ${uptime_short} ",
+        "full_text" : "▲ ${uptime_short} ",
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "dl ${downspeed enp0s25}/s ",
+        "full_text" : "▽ ${downspeed enp0s25}/s ",
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "${exec amixer get Master -M | grep -oP '\d*%' | head -n1} ",
+        "full_text" : "♫ ${exec amixer get Master -M | grep -oP '\d*%' | head -n1} ",
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : " ${time %A %d %b} ${time %l:%M %P} ",
+        "full_text" : "∵ ${time %A %d %b} ${time %l:%M %P} ",
         "color"     : "\#88ABC4"
     },
     {
