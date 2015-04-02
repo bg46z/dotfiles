@@ -1,6 +1,9 @@
 # Environment Variables
 export EDITOR=vim
 export TERM=xterm-256color
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$HOME/bin:$HOME/.rvm/bin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+ZSHCONFDIR=(~/.dotfiles/zsh)
 ZSHCONFDIR=($DOTFILES/zsh)
 # export PATH="$HOME/bin:$PATH"
 typeset -gU path
