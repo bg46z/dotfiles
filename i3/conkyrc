@@ -1,12 +1,13 @@
+double_buffer yes
 out_to_x no
 own_window no
 out_to_console yes
 background no
 max_text_width 0
-net_avg_samples 3
+net_avg_samples 1
 
 # Update interval in seconds
-update_interval 2
+update_interval 5
 
 # This is the number of times Conky will update before quitting.
 # Set to zero to run forever.
