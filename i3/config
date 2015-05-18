@@ -7,9 +7,6 @@ font xft:DejaVu Sans Mono 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-#bindsym $mod+Return exec urxvtc
-
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -17,8 +14,8 @@ hide_edge_borders both
 new_window none
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run -l 3 -i -fn "DejaVu Sans Mono-10" -p ">>> "
-bindsym $mod+d exec j4-dmenu-desktop --term=urxvtc
+bindsym $mod+d exec dmenu_run -l 3 -i -fn "DejaVu Sans Mono-10" -p ">>> "
+#bindsym $mod+d exec j4-dmenu-desktop
 
 
 # change focus
@@ -163,10 +160,7 @@ bar {
 
 	#status_command i3status -c ~/.dotfiles/i3/i3status.conf
 	#status_command j4status -o i3bar -i nm -i sensors -i time
-    i3bar_command i3bar
-	status_command $HOME/.i3/conky-i3bar
-	font pango:Droid Sans Mono 10 
-	position top
+    i3bar_command exec ~/.dotfiles/i3/lifebar/lifebar
 }
 
 # window_role is Typically useful for effecting child windows

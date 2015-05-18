@@ -40,7 +40,7 @@ TEXT
         "color"     : "\#88ABC4"
 	},
 	{
-		"full_text"	: "☆  ${uid_name ${exec id -u}} ☆",	
+		"full_text"	: "☆ ${uid_name ${exec id -u}} ☆",	
         "color"     : "\#88ABC4"
 	},
     {
@@ -60,7 +60,7 @@ TEXT
         "color"     : "\#88ABC4"
     },
     {
-        "full_text" : "∵ ${time %A %d %b} ${time %l:%M %P} ",
+        "full_text" : "${time %A %d %b} ${time %l:%M %P} ",
         "color"     : "\#88ABC4"
     },
     {

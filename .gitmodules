@@ -1,0 +1,3 @@
+[submodule "i3/lifebar"]
+	path = i3/lifebar
+	url = https://github.com/lynks--/lifebar.git

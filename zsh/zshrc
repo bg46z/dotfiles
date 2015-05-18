@@ -46,3 +46,4 @@ for file in $sourcefiles[@]; do
 		source "$file"
 	fi
 done
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}

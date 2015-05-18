@@ -21,6 +21,7 @@
 	unstage = reset HEAD --
 	last = log -1 HEAD
 	sign = commit -S
+	ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
 [web]
 	browser = google-chrome-stable
 [diff]
