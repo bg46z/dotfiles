@@ -2,7 +2,7 @@
 	editor = vim
 	excludesfile = ~/.gitignore
 [user]
-	email = zbridges@gmail.com
+	email = zbridges@fsu.edu
 	name = Zachary Bridges
 	signingkey = 72D5D623
 [push]

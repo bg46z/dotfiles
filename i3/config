@@ -160,7 +160,7 @@ bar {
 
 	#status_command i3status -c ~/.dotfiles/i3/i3status.conf
 	#status_command j4status -o i3bar -i nm -i sensors -i time
-    i3bar_command exec ~/.dotfiles/i3/lifebar/lifebar
+    i3bar_command ~/.dotfiles/i3/lifebar/lifebar
 }
 
 # window_role is Typically useful for effecting child windows
@@ -168,6 +168,7 @@ bar {
 # windows, etc.
 #   xprop | grep -i 'role'#
 for_window [window_role="pop-up"] floating enable, border pixel 1
+for_window [class="(?i)virtualbox"] floating enable, border pixel 1
 for_window [class="(?i)pidgin" window_role="buddy_list"] floating enable, border pixel 1, move container to workspace 1
 
 # Scratchpad
