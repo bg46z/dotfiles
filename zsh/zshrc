@@ -10,12 +10,11 @@ typeset -gU path
 path=($HOME/bin $HOME/.gem/ruby/2.2.0/bin $HOME/work/imbldaptools/bin $path)
 zstyle ":completion:*:commands" rehash 1
 
-
-# Autoload
-
 # Completion and other built-in functions
 autoload -Uz compinit vcs_info
 compinit
+
+setopt menu_complete
 
 
 fpath=( $ZSHCONFDIR/functions "${fpath[@]}")
