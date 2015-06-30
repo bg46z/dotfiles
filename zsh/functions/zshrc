@@ -1,1 +1,2 @@
 $EDITOR $ZSHCONFDIR/zshrc
+source $ZSHCONFDIR/zshrc

@@ -9,3 +9,4 @@ alias shut='echo "powering off..."; sudo shutdown -h now >& -'
 alias less="$PAGER"
 alias zless="$PAGER"
 alias more="$PAGER"
+alias rs="rsync"
