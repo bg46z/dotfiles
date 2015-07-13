@@ -9,14 +9,6 @@
 # List of modifier:
 #   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
 #   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
-#
-
-# The release modifier is not a standard X modifier, but you can
-# use it if you want to catch release events instead of press events
-
-# By defaults, xbindkeys does not pay attention with the modifiers
-# NumLock, CapsLock and ScrollLock.
-# Uncomment the lines above if you want to pay attention to them.
 
 keystate_numlock = enable
 keystate_capslock = enable
@@ -33,6 +25,15 @@ keystate_scrolllock= enable
 
 "urxvtc -e nvim"
 	Control+Mod1+a
+
+"google-chrome-stable"
+	Control+shift+z
+
+"amixer -q sset Master 3%+"
+	Mod4+F12
+
+"amixer -q sset Master 3%-"
+	Mod4+F11
 
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s

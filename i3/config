@@ -1,4 +1,6 @@
-exec --no-startup-id sh ~/.xinitrc
+exec --no-startup-id bash ~/.xinitrc
+exec --no-startup-id xautolock -time 10 -locker i3lock
+
 # Set Modifier
 set $mod Mod4
 
@@ -44,7 +46,7 @@ bindsym $mod+Shift+Right move right
 
 # THIS IS INVERTED
 # split horizontally 
-bindsym $mod+b split v
+bindsym $mod+Shift+v split v
 
 #this is inverted
 # split vertically
@@ -158,6 +160,7 @@ bindsym $mod+m mode "move"
 # finds out, if available)
 bar {
 
+	#status_command ~/.dotfiles/i3/conky-i3bar
 	#status_command i3status -c ~/.dotfiles/i3/i3status.conf
 	#status_command j4status -o i3bar -i nm -i sensors -i time
     i3bar_command ~/.dotfiles/i3/lifebar/lifebar
@@ -174,4 +177,3 @@ for_window [class="(?i)pidgin" window_role="buddy_list"] floating enable, border
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-

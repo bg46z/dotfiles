@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/bin/bash
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.xmodmaprc
 sysresources=/etc/X11/xinit/.Xresources
@@ -40,16 +39,26 @@ envfile="$HOME/.gnupg/gpg-agent.env"
 if [[ -e "$envfile" ]] && kill -0 $(grep GPG_AGENT_INFO "$envfile" | cut -d: -f 2) 2>/dev/null; then
 	eval "$(cat "$envfile")"
 else
-	eval "$(gpg-agent --daemon --enable-ssh-support --write-env-file "$envfile")"
+	eval "$(gpg-agent --daemon --enable-ssh-support )"
 fi
 export GPG_AGENT_INFO  # the env file does not contain the export statement
 export SSH_AUTH_SOCK   # enable gpg-agent for ssh
 
+if [ -z "$(pgrep urxvtd)" ] ; then
+	urxvtd -q -o -f &
+fi
 
-urxvtd -q -o -f &
-compton -cCG --vsync opengl --config .dotfiles/compton/compton.conf &
-xbindkeys &
-#xrandr --output DVI-0 --auto --left-of DVI-1 
-#xrandr --output DVI-1 --auto 
-.dotfiles/i3/fehchanger &
+#if [ -z "$(pgrep compton)" ] ; then
+#	compton -cCG \
+#		--vsync opengl \
+#		--config .dotfiles/compton/compton.conf &
+#fi
+
+if [ -z "$(pgrep xbindkeys)" ] ; then
+	xbindkeys &
+fi
+
+if [ -z "$(pgrep fehchanger)" ] ; then
+	.dotfiles/i3/fehchanger &
+fi
 #exec i3
