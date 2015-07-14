@@ -61,4 +61,8 @@ fi
 if [ -z "$(pgrep fehchanger)" ] ; then
 	.dotfiles/i3/fehchanger &
 fi
+
+if [ -z "$(pgrep xsettingsd)" ] ; then
+	xsettingsd &
+fi
 #exec i3
