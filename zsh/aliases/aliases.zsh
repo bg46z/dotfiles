@@ -6,3 +6,4 @@ alias la="l -la"
 alias grep="grep --color=auto"
 alias rest='echo "rebooting..."; sudo shutdown -r now >& -'
 alias shut='echo "powering off..."; sudo shutdown -h now >& -'
+alias mmv='noglob zmv -W'

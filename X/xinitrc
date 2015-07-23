@@ -65,4 +65,6 @@ fi
 if [ -z "$(pgrep xsettingsd)" ] ; then
 	xsettingsd &
 fi
+
+dropbox-cli start &
 #exec i3

@@ -26,6 +26,9 @@ TEXT
 # JSON for i3bar
 
 [
+	{
+		"full_text" : "/:${fs_free /} home:${fs_free /home}"
+	},
     {
         "full_text" : "${memfree} :: ${memperc}%",
 		"color"		: "${if_match ${memperc}>70}\#FFA85C"${else}\#5CFF67${endif}"

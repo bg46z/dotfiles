@@ -5,7 +5,7 @@ exec --no-startup-id xautolock -time 10 -locker i3lock
 set $mod Mod4
 
 # Fonts
-font xft:Nimbus Mono 14
+font xft:Droid Sans Regular 14
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -17,8 +17,8 @@ hide_edge_borders both
 new_window none
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -l 3 -i -fn "DejaVu Sans Mono-10" -p ">>> "
-#bindsym $mod+d exec j4-dmenu-desktop
+#bindsym $mod+d exec dmenu_run -l 3 -i -fn "Sans Regular 12" -p ">>> "
+bindsym $mod+d exec j4-dmenu-desktop --dmenu="dmenu -i -l 3 -i -fn 'Droid Sans Mono Regular-16' -p '>>> '"
 
 # change focus
 bindsym $mod+h focus left
@@ -160,9 +160,8 @@ bindsym $mod+m mode "move"
 # finds out, if available)
 bar {
 	position 	top
-	font xft:Nimbus Mono Bold 14
-	status_command mickey.py
-	#status_command ~/.dotfiles/i3/conky-i3bar
+	font xft:Sans Bold 12
+	status_command ~/.dotfiles/i3/conky-i3bar
 	#status_command i3status -c ~/.dotfiles/i3/i3status.conf
 	#status_command j4status -o i3bar -i nm -i sensors -i time
     #i3bar_command ~/.dotfiles/i3/lifebar/lifebar
@@ -175,6 +174,7 @@ bar {
 for_window [window_role="pop-up"] floating enable, border pixel 1
 for_window [class="(?i)virtualbox"] floating enable, border pixel 1
 for_window [class="(?i)pidgin" window_role="buddy_list"] floating enable, border pixel 1, move container to workspace 1
+for_window [title="(?i)hangouts"] floating enable, border pixel 5, move absolute position 3520 560
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
