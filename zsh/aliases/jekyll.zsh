@@ -1,1 +1,0 @@
-alias jser="jekyll serve"

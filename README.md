@@ -1,17 +1,16 @@
 dotfiles
 ========
 
-This is a collection of my dotfiles, and other configuration necessities for my workflow.
+## Installation
 
-* `i3`
-* `zsh`
-* `mutt`
+You need to link a few things to get this working correctly.
 
-OSX Note:  
-For ZSH config to work you need to download and use the latest [GNU coreutils](http://www.gnu.org/software/coreutils/).
+```
+git clone $repo ~/.dotfiles
+ln -s  ~/.dotfiles/zshrc ~/.zshrc
+ln -s  ~/.dotfiles/zshenv ~/.zshenv
+ln -s ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+```
+## WSL Considerations
 
-You can also use [Homebrew](http://brew.sh) to install the GNU coreutils package:
-
-`brew install coreutils`
-
-In the future I plan to move aliasing to autoloaded functions in order to reduce the startup time.
+This repo was used for my linux and OSX shell configurations. But since needing to work with WSL, the direction has shifted towards simplicity and compatibility with all of WSL's quirks and features.
