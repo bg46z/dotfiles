@@ -1,14 +1,4 @@
 export DOTFILES="$HOME/.dotfiles"
-export TMPDIR="$HOME/tmp"
+export TMPDIR="$HOME/.tmp"
 export BROWSER=google-chrome-stable
-
-unamestr=`uname`
-if [[ "$unamestr" == 'Linux' ]] ; then
-	export PAGER="/usr/local/bin/vimpager"
-	export GDK_USE_XFT=1
-	export QT_XFT=true
-	export JAVA_HOME="/usr/lib/jvm/java-8-jdk"
-	export TERM=rxvt-unicode-256color
-	export VIMRUNTIME="/usr/local/share/vim/vim74"
-fi
 

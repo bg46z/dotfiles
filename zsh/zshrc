@@ -7,7 +7,7 @@ ZSHCONFDIR=(~/.dotfiles/zsh)
 ZSHCONFDIR=($DOTFILES/zsh)
 # export PATH="$HOME/bin:$PATH"
 typeset -gU path
-path=($HOME/.local/bin $HOME/bin $HOME/.cabal/bin $HOME/Android/Sdk/tools $HOME/Android/Sdk/platform-tools $HOME/.gem/ruby/2.2.0/bin $HOME/work/imbldaptools/bin /usr/local/heroku/bin $path $HOME/src/git_clones/depot_tools )
+path=($HOME/.local/bin $HOME/bin $HOME/.cabal/bin $HOME/Android/Sdk/tools $HOME/Android/Sdk/platform-tools $HOME/.gem/ruby/2.2.0/bin  $path )
 zstyle ":completion:*:commands" rehash 1
 
 # Completion and other built-in functions
