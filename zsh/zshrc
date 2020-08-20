@@ -5,9 +5,8 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$HOME/bin:$HOME/.rvm/bin:$P
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 ZSHCONFDIR=(~/.dotfiles/zsh)
 ZSHCONFDIR=($DOTFILES/zsh)
-# export PATH="$HOME/bin:$PATH"
 typeset -gU path
-path=($HOME/.local/bin $HOME/bin $HOME/.cabal/bin $HOME/Android/Sdk/tools $HOME/Android/Sdk/platform-tools $HOME/.gem/ruby/2.2.0/bin  $path )
+path=($HOME/.local/bin $HOME/bin $HOME/.local/bin/flutter/bin $HOME/.cabal/bin $HOME/Android/Sdk/tools $HOME/Android/Sdk/platform-tools $HOME/.gem/ruby/2.2.0/bin  $path )
 zstyle ":completion:*:commands" rehash 1
 
 # Completion and other built-in functions
@@ -42,3 +41,5 @@ for file in $sourcefiles[@]; do
 		source "$file"
 	fi
 done
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
