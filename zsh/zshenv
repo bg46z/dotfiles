@@ -1,4 +1,0 @@
-export DOTFILES="$HOME/.dotfiles"
-export TMPDIR="$HOME/.tmp"
-export BROWSER=google-chrome-stable
-

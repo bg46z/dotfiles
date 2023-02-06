@@ -1,45 +1,21 @@
-# Environment Variables
-export EDITOR=vim
-export TERM=xterm-256color
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$HOME/bin:$HOME/.rvm/bin:$PATH"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-ZSHCONFDIR=(~/.dotfiles/zsh)
-ZSHCONFDIR=($DOTFILES/zsh)
 typeset -gU path
-path=($HOME/.local/bin $HOME/bin $HOME/.local/bin/flutter/bin $HOME/.cabal/bin $HOME/Android/Sdk/tools $HOME/Android/Sdk/platform-tools $HOME/.gem/ruby/2.2.0/bin  $path )
-zstyle ":completion:*:commands" rehash 1
+path=( ~/.local/bin $path)
+fpath=( ~/.dotfiles/zsh/functions "${fpath[@]}")
 
-# Completion and other built-in functions
-autoload -Uz compinit vcs_info zmv
+autoload -Uz compinit vcs_info
+autoload -U $fpath[1]/*(.:t)
 compinit
 
-fpath=( $ZSHCONFDIR/functions "${fpath[@]}")
-#autoload -Uz ww _git-add vcs_info_rprompt dot 
-for file in $ZSHCONFDIR/functions/* ; do
-	if [[ -a "$file" ]]; then
-		filename=${file:t}
-		autoload -Uz "$filename"
-	fi
-done
-
-
-# Source Files
-# Add files to "sourcefiles" array, then source each file in the array.
-typeset -ga sourcefiles
-
-for file in $ZSHCONFDIR/aliases/* ; do
-	if [[ -a "$file" ]]; then
-		sourcefiles+="$file"
-	fi
-done
-
-# Prompt Specific
-sourcefiles+="$ZSHCONFDIR/prompt/prompt.zsh"
-
-for file in $sourcefiles[@]; do
-	if [[ -a "$file" ]]; then
-		source "$file"
-	fi
-done
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Left-handed prompt
+PROMPT="%(!.%F{214}%U%Broot%b%u@%m %~ %#%f .%2~ %F{160}>>%f%F{136};--%f%F{160}>%f )"
+PROMPT2="%~ %F{160}>%f "
+
+setopt prompt_subst
+zstyle ':vcs_info:*' actionformats '%F{160}>>[%F{136}%b|%a%F{160}]<<%f'
+zstyle ':vcs_info:*' formats '%F{160}>>[%F{136}%b%F{160}]<<%f'
+zstyle ':vcs_info:*' enable git
+
+# Right-handed prompt
+RPROMPT=$'$(vcs_info_rprompt)'
